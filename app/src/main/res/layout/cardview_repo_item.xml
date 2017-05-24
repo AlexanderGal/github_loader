@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_user_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/layout_padding"
+    app:cardElevation="@dimen/elevation"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/layout_padding">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/repo_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/repo_name_label" />
+
+        <TextView
+            android:id="@+id/default_branch_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/repo_name_label"
+            android:text="@string/branch_def_label" />
+
+        <TextView
+            android:id="@+id/url_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/default_branch_label"
+            android:text="@string/url_label" />
+
+        <TextView
+            android:id="@+id/language_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/url_label"
+            android:text="@string/language_label" />
+
+
+        <TextView
+            android:id="@+id/repo_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/repo_name_label"
+            android:layout_toEndOf="@id/repo_name_label"
+            android:layout_toRightOf="@id/repo_name_label"
+            tools:text="Name" />
+
+        <TextView
+            android:id="@+id/default_branch_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/default_branch_label"
+            android:layout_toEndOf="@id/default_branch_label"
+            android:layout_toRightOf="@id/default_branch_label"
+            tools:text="Branch" />
+
+        <TextView
+            android:id="@+id/url_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/url_label"
+            android:layout_toEndOf="@id/url_label"
+            android:layout_toRightOf="@id/url_label"
+            android:lines="1"
+            tools:text="https://github.com/octocat/Hello-World" />
+
+        <TextView
+            android:id="@+id/language_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/language_label"
+            android:layout_toEndOf="@id/language_label"
+            android:layout_toRightOf="@id/language_label"
+            tools:text="Java" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

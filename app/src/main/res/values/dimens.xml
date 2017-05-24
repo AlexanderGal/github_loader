@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_margin">40dp</dimen>
+    <dimen name="elevation">8dp</dimen>
+    <dimen name="element_view_margin">8dp</dimen>
+    <dimen name="layout_padding">4dp</dimen>
+</resources>

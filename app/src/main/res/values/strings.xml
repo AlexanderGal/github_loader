@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GitHub LookUp</string>
+    <string name="find_user">Найти!</string>
+    <string name="enter_name">Введите имя</string>
+    <string name="image_logo">Image logo</string>
+    <string name="repo_name_label">Название репозитория :</string>
+    <string name="branch_def_label">Ветка по умолчанию :</string>
+    <string name="url_label">Ссылка :</string>
+    <string name="language_label">Язык :</string>
+</resources>
