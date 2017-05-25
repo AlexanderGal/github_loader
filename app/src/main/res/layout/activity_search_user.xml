@@ -13,9 +13,8 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/image_margin"
         android:contentDescription="@string/image_logo"
-        android:src="@drawable/github_logo" />
+        android:src="@drawable/github" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/user_name_textinputlayout"
