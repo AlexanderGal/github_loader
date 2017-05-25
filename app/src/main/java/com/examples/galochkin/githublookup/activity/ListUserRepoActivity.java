@@ -45,24 +45,22 @@ public class ListUserRepoActivity extends AppCompatActivity {
     }
 
     class RepoLoaderCallback implements LoaderManager.LoaderCallbacks<List<Repository>> {
-        private String TAG = RepoLoaderCallback.class.getCanonicalName();
-
         @Override
         public Loader<List<Repository>> onCreateLoader(int id, Bundle args) {
-            Log.e(TAG, "public Loader<List<Repository>> onCreateLoader(int id, Bundle args)");
+            Log.e(TAG, "RepoLoaderCallback public Loader<List<Repository>> onCreateLoader(int id, Bundle args)");
             return new RepositoryLoader(ListUserRepoActivity.this, mRepositoryStorage, mNetworkReader);
         }
 
         @Override
         public void onLoadFinished(Loader<List<Repository>> loader, List<Repository> data) {
-            Log.e(TAG, "public void onLoadFinished(Loader<List<Repository>> loader, List<Repository> data)");
+            Log.e(TAG, "RepoLoaderCallback public void onLoadFinished(Loader<List<Repository>> loader, List<Repository> data)");
             mProgressBar.setVisibility(View.GONE);
             mAdapter.setData(data);
         }
 
         @Override
         public void onLoaderReset(Loader<List<Repository>> loader) {
-            Log.e(TAG, "public void onLoadFinished(Loader<List<Repository>> loader, List<Repository> data)");
+            Log.e(TAG, "RepoLoaderCallback public void onLoadFinished(Loader<List<Repository>> loader, List<Repository> data)");
         }
     }
 }
