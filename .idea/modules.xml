@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GitHubLookUp.iml" filepath="$PROJECT_DIR$/GitHubLookUp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/github_loader.iml" filepath="$PROJECT_DIR$/github_loader.iml" />
     </modules>
   </component>
 </project>

@@ -52,21 +52,21 @@ public class RepositoryRecyclerAdapter extends RecyclerView.Adapter<RecyclerView
     }
 
     private class ViewHolder extends RecyclerView.ViewHolder {
-        TextView mRepoNamelTextView;
+        TextView mRepoNameTextView;
         TextView mRepoBranchTextView;
         TextView mRepoUrlTextView;
         TextView mRepoLanguageTextView;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            mRepoNamelTextView = (TextView) itemView.findViewById(R.id.repo_name_textview);
+            mRepoNameTextView = (TextView) itemView.findViewById(R.id.repo_name_textview);
             mRepoBranchTextView = (TextView) itemView.findViewById(R.id.default_branch_textview);
             mRepoUrlTextView = (TextView) itemView.findViewById(R.id.url_textview);
             mRepoLanguageTextView = (TextView) itemView.findViewById(R.id.language_textview);
         }
 
         void setText(String repoName, String repoBranch, String repoUrl, String repoLanguage) {
-            mRepoNamelTextView.setText(repoName);
+            mRepoNameTextView.setText(repoName);
             mRepoBranchTextView.setText(repoBranch);
             mRepoUrlTextView.setText(repoUrl);
             mRepoLanguageTextView.setText(repoLanguage);

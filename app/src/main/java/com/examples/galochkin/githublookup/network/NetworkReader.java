@@ -19,7 +19,7 @@ public class NetworkReader {
     private static final String REQUEST_METHOD = "GET";
     private static final String GITHUB_API_URL = "https://api.github.com/users/%s/repos";
     private URL mURL;
-    private String mURLAdress;
+    private String mURLAddress;
     private String mUserLogin;
     private HttpURLConnection mHttpURLConnection;
     private BufferedReader mBufferedReader;
@@ -29,17 +29,13 @@ public class NetworkReader {
         this.mUserLogin = userLogin;
     }
 
-    public static String getTAG() {
-        return TAG;
-    }
-
     public void readContentPage() {
-        mURLAdress = String.format(GITHUB_API_URL, mUserLogin);
-        Log.e(TAG, "public String readContentPage(), url = " + mURLAdress);
+        mURLAddress = String.format(GITHUB_API_URL, mUserLogin);
+        Log.e(TAG, "public String readContentPage(), url = " + mURLAddress);
         StringBuilder result = new StringBuilder();
 
         try {
-            mURL = new URL(mURLAdress);
+            mURL = new URL(mURLAddress);
             mHttpURLConnection = (HttpURLConnection) mURL.openConnection();
             mHttpURLConnection.setRequestMethod(REQUEST_METHOD);
             mHttpURLConnection.connect();
@@ -68,12 +64,12 @@ public class NetworkReader {
         Log.e(TAG, "Readed content page: " + mReadedString);
     }
 
-    public String getmURLAdress() {
-        return mURLAdress;
+    public String getmURLAddress() {
+        return mURLAddress;
     }
 
-    public void setmURLAdress(String mURLAdress) {
-        this.mURLAdress = mURLAdress;
+    public void setmURLAddress(String mURLAddress) {
+        this.mURLAddress = mURLAddress;
     }
 
     public String getReadedString() {
@@ -94,7 +90,7 @@ public class NetworkReader {
                 "mURL=" + mURL +
                 ", mHttpURLConnection=" + mHttpURLConnection +
                 ", mBufferedReader=" + mBufferedReader +
-                ", mURLAdress='" + mURLAdress + '\'' +
+                ", mURLAddress='" + mURLAddress + '\'' +
                 '}';
     }
 }

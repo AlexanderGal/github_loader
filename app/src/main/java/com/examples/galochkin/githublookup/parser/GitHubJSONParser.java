@@ -1,5 +1,8 @@
 package com.examples.galochkin.githublookup.parser;
 
+import android.content.Context;
+
+import com.examples.galochkin.githublookup.R;
 import com.examples.galochkin.githublookup.model.Repository;
 
 import org.json.JSONArray;
@@ -15,9 +18,13 @@ import java.util.List;
 
 public class GitHubJSONParser {
     private static final String TAG = GitHubJSONParser.class.getCanonicalName();
+    private final Context mContext;
+
+    public GitHubJSONParser(Context context){
+        mContext = context;
+    }
 
     public List<Repository> parse(String jsonArray) {
-
         ArrayList<Repository> result = new ArrayList<>();
         try {
             JSONArray jArray = new JSONArray(jsonArray);
@@ -25,16 +32,16 @@ public class GitHubJSONParser {
             for (int i = 0; i < jArray.length(); i++) {
                 JSONObject jsonObject = jArray.getJSONObject(i);
                 Repository rep = new Repository(
-                        jsonObject.getString("name"),
-                        jsonObject.getString("default_branch"),
-                        jsonObject.getString("svn_url"),
-                        jsonObject.getString("language")
+                        jsonObject.getString(mContext.getString(R.string.json_name)),
+                        jsonObject.getString(mContext.getString(R.string.json_default_branch)),
+                        jsonObject.getString(mContext.getString(R.string.json_svn_url)),
+                        jsonObject.getString(mContext.getString(R.string.json_language))
                 );
                 result.add(rep);
             }
         } catch (Exception e) {
             e.printStackTrace();
-            result.add(new Repository("Пользователя не существует :(", "", "", ""));
+            result.add(new Repository(mContext.getString(R.string.user_not_exist), "", "", ""));
         }
         return result;
     }

@@ -25,7 +25,7 @@ public class RepositoryLoader extends AsyncTaskLoader<List<Repository>> {
         super(context);
         this.mRepositoryStorage = repositoryStorage;
         this.mNetworkReader = mNetworkReader;
-        this.mParser = new GitHubJSONParser();
+        this.mParser = new GitHubJSONParser(context.getApplicationContext());
     }
 
     @Override

@@ -7,4 +7,9 @@
     <string name="branch_def_label">Ветка по умолчанию : </string>
     <string name="url_label">Ссылка : </string>
     <string name="language_label">Язык : </string>
+    <string name="json_name">name</string>
+    <string name="json_default_branch">default_branch</string>
+    <string name="json_svn_url">svn_url</string>
+    <string name="json_language">language</string>
+    <string name="user_not_exist">Пользователя не существует :(</string>
 </resources>
